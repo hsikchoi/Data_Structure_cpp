@@ -174,28 +174,28 @@ public:
 
 		MyStack s; // 힌트: MyStack q;
 		s.Push(root_);
-		//Node* current = root_;
+		Node* current = root_;
 		
 		while (!s.IsEmpty())
 		{
 			//TODO:
-			/*Visit(current);
+			Visit(current);
 
 			if (current->right) { s.Push(current->right); }
 			if (current->left) { s.Push(current->left); }
 			
 			current = s.Top();
-			s.Pop();*/
-
-
-			//해설
-			Node* current = s.Top();
 			s.Pop();
 
-			Visit(current);
 
-			if (current->right) { s.Push(current->right); }
-			if (current->left) { s.Push(current->left); }
+			// 강의해설
+			//Node* current = s.Top();      //current를 while문 내부에 선언
+			//s.Pop();
+
+			//Visit(current);
+
+			//if (current->right) { s.Push(current->right); }
+			//if (current->left) { s.Push(current->left); }
 
 		}
 		
